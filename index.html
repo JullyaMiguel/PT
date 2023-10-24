@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História</title>
+</head>
+
+<body>
+    <header>
+        <h1>JGZGJ</h1>
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">Carrinho</a>
+        <a href="#" class="nav-item">Contato</a>
+    </header>
+
+
+    <div class="container">
+        <div class="row flip-boxes">
+            <div class="col-md-3 col-sm-4 col-8 flip-box">
+                <div class="front" style="background-image: url();">
+                    <div class="content text-center">
+                        JGZ - Joias Sustentáveis<br>
+                        <span class="click-for-more">
+                        </span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        A JGZ é dedicada a criar joias sustentáveis usando materiais reciclados. Nosso processo de
+                        fabricação é amigável ao meio ambiente e responsável.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 flip-box">
+                <div class="front"
+                    style="background-image: url(https://assets-global.website-files.com/5afd737ac94d739e059655ac/5b086ee39bfa3d01124a108e_lata4.jpg);">
+                    <div class="content">
+                        Materiais Sustentáveis
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        tilizamos materiais reciclados, como latas, para criar nossas joias. Cada peça é única e
+                        ambientalmente responsável.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 flip-box">
+                <div class="front"
+                    style="background-image: url(https://www.cleanipedia.com/images/00d1hxgfwfa6/6huzoaIxbNviFqAIVqRyPN/c4f12096741c780f104735326b89614e/My5qcGc/944w-629h/como-limpar-j%C3%B3ias-de-prata.jpg);">
+                    <div class="content">
+                        Beleza e Sustentabilidade
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="content">
+                        Na JGZ, acreditamos que a beleza e a sustentabilidade podem andar de mãos dadas. Descubra nossas
+                        joias únicas e estilosas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="gay"></div>
+    <style>
+        /* CSS */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* min-height: 100vh; */
+            flex-direction: column;
+            background-color: #3A1078;
+;
+
+        }
+
+        header {
+            font-size: 12px;
+            text-align: center;
+            background-color:#4E31AA;
+            color: white;
+            height: 90px;
+            width: 100%;
+        }
+
+        a {
+            font-size: 25px;
+            color: white;
+        }
+
+        .flip-boxes {
+            justify-content: center;
+        }
+
+        .flip-box {
+            display: flex;
+            align-content: stretch;
+            min-height: 200px;
+            flex-wrap: wrap;
+            position: relative;
+            border: 10px solid transparent;
+            padding: 0;
+            border-top: 0;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+
+            &:hover {
+                .back {
+                    transform: rotateY(0deg);
+                    z-index: 10;
+                }
+
+                .front {
+                    transform: rotateY(180deg);
+                    z-index: -1;
+                }
+
+            }
+
+            .back,
+            .front {
+                position: relative;
+                background-color: #2F58CD;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex: 0 0 100%;
+                -webkit-transition: all 1s cubic-bezier(.5, 1, .5, 1);
+                transition: all 1s cubic-bezier(.5, 1.3, .5, 1.3);
+                transform-style: preserve-3d;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .back {
+                background-color: #3795BD;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: -1;
+                transform: rotateY(-180deg);
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 30px;
+                    height: 30px;
+                    border: 15px solid transparent;
+                    border-bottom-color: white;
+                    border-left-color: white;
+                }
+            }
+
+            .front {
+                z-index: 10;
+
+                .content {
+                    font-size: 2rem;
+                    width: 600px;
+                    height: 100px;
+                    text-align: center;
+                    display: flex;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    border: 15px solid #4E31AA;
+                    border-bottom-color: white;
+                    border-right-color: white;
+                }
+            }
+
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                -webkit-transform: translateZ(50px);
+                transform: translateZ(50px);
+                text-shadow: 0px 0px 2px black;
+
+            }
+
+           .footer{
+            background-color: black;
+            color: white;
+            margin-top: auto;
+            height: 100px;
+            width: 100px;
+           }
+
+        }
+    </style>
+
+
+
+</body>
+
+</html>
